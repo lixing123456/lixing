@@ -1,0 +1,225 @@
+<!DOCTYPE html><html><head><title>第一天</title><meta charset='utf-8'><link href='https://cdn.maxiang.io/res-min/themes/marxico.css' rel='stylesheet'><style></style></head><body><div id='preview-contents' class='note-content'>
+                        
+                    
+
+<div><div class="toc"><div class="toc">
+<ul>
+<li><ul>
+<li><a href="#第一天">第一天</a><ul>
+<li><ul>
+<li><a href="#1常用的ide">1.常用的IDE</a></li>
+<li><a href="#2常用的浏览器">2.常用的浏览器</a></li>
+<li><a href="#3谷歌浏览器的控制台f12">3.谷歌浏览器的控制台（F12）</a></li>
+<li><a href="#4js中的变量和数据类型">4..JS中的变量和数据类型</a></li>
+<li><a href="#5js做客户端语言">5.JS做客户端语言</a><ul>
+<li><a href="#52">5.2</a></li>
+</ul>
+</li>
+<li><a href="#6变量和数据类型variable和data-type">6.变量和数据类型（variable和data type）</a></li>
+<li><a href="#6js中常用的数据类型">6.JS中常用的数据类型</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+
+<h2 id="第一天">第一天</h2>
+
+
+
+<h4 id="1常用的ide">1.常用的IDE</h4>
+
+<ul><li><p>sublime text</p></li>
+<li><p>Hbuilderx</p></li>
+<li><p>webstorm</p></li>
+<li><p>Visual Studio Code</p></li>
+</ul>
+
+
+
+<h4 id="2常用的浏览器">2.常用的浏览器</h4>
+
+<ul><li><p>webkit内核（V8引擎）</p>
+
+<ul>
+<li><p>谷歌Chrome</p></li>
+<li><p>Safari</p></li>
+<li><p>Opera&gt;=V14</p></li>
+<li><p>国产浏览器</p></li>
+<li><p>手机浏览器</p></li>
+<li><p>…….</p></li></ul></li>
+<li><p>Gecko</p>
+
+<ul>
+<li><p>火狐Firefox</p></li></ul></li>
+<li><p>Presto</p>
+
+<ul>
+<li><p>Opera&lt;v14</p></li></ul></li>
+<li><p>Trident</p>
+
+<ul>
+<li><p>IE</p></li>
+<li><p>IE EDGE开始采用双内核（其中包括chrome迷你）</p></li></ul></li>
+</ul>
+
+
+
+<h4 id="3谷歌浏览器的控制台f12">3.谷歌浏览器的控制台（F12）</h4>
+
+<ul><li><p>Elements：查看结构样式，可以修改这些内容</p></li>
+<li><p>Console：查看输出结果和报错信息，是JS调试的利器</p></li>
+<li><p>Sources：查看项目源码</p></li>
+<li><p>Network：查看当前网站所有资源的请求信息（包括和服务器传输的HTTP报文信息）,加载事件等（根据加载时间进行项目优化）</p></li>
+</ul>
+
+
+
+<h4 id="4js中的变量和数据类型">4..JS中的变量和数据类型</h4>
+
+<ul><li><p>由三部分组成</p>
+
+<ul>
+<li><p>ECMAScript（ES）：描述了该语言的语法和基本对象</p></li>
+<li><p>DOM：文档对象模型，描述处理网页内容的方法和接口</p></li>
+<li><p>BOM：浏览器对象模型，描述与浏览器进行交互的方法与接口</p></li></ul></li>
+</ul>
+
+
+
+<h4 id="5js做客户端语言">5.JS做客户端语言</h4>
+
+<ul><li><p>按照相关的JS语法，去操作页面中的元素，有时还要操作浏览器里面的一些功能</p></li>
+<li><p>ECMAScript3/5/6….，JS的语法规范（变量，数据类型，操作语句等等）</p></li>
+<li><p>DOM（document object model）：文档对象模型，提供一些JS的属性和方法，用来操作页面中的DOM元素</p></li>
+<li><p>BOM（browser object model）：浏览器对象模型，提供一些JS的属性和方法，用来操作浏览器的BOM元素</p></li>
+</ul>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="hljs lsl"><div class="hljs-line">##### <span class="hljs-number">5.1</span>
+</div><div class="hljs-line"><span class="hljs-comment">//ES3</span>
+</div><div class="hljs-line">var a=<span class="hljs-number">12</span>;
+</div><div class="hljs-line">a=<span class="hljs-number">13</span>;
+</div><div class="hljs-line">console.log(a);<span class="hljs-comment">//=&gt;输出的是a代表的值13</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-comment">//ES6</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">let b=<span class="hljs-number">100</span>;
+</div><div class="hljs-line">b=<span class="hljs-number">200</span>;
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">const c=<span class="hljs-number">1000</span>;
+</div><div class="hljs-line">c=<span class="hljs-number">2000</span>;<span class="hljs-comment">//=&gt;报错:CONST创建的变量，存储的值不能被改变</span>
+</div></code></pre>
+
+
+
+<h5 id="52">5.2</h5>
+
+<p>//创建函数也相当于在创建变量 <br>
+function fn(){} <br>
+//创建类也相当于在创建变量 <br>
+class A{} <br>
+//ES6的模块导入也可以创建变量 <br>
+import B from ‘./B.js’;</p>
+
+
+
+<h4 id="6变量和数据类型variable和data-type">6.变量和数据类型（variable和data type）</h4>
+
+<ul><li><p>变量</p>
+
+<ul>
+<li><p>多种定义方式：var/let/const/function/import/class</p></li>
+<li><p>严格的命名规范：区分大小写/驼峰命名/关键字保留字</p></li></ul></li>
+</ul>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="hljs rust"><div class="hljs-line">+ 使用数字，字母，下划线，$，数字不能作为开头
+</div><div class="hljs-line">        + <span class="hljs-keyword">let</span> $<span class="hljs-keyword">box</span>;<span class="hljs-comment">//=&gt;一般用JQ获取的以$开头</span>
+</div><div class="hljs-line">        + <span class="hljs-keyword">let</span> _<span class="hljs-keyword">box</span>;<span class="hljs-comment">//=&gt;一般公共变量都是_开头</span>
+</div><div class="hljs-line">        + <span class="hljs-keyword">let</span> <span class="hljs-number">1</span><span class="hljs-keyword">box</span>；<span class="hljs-comment">//=&gt;不可以，但是可以写box1</span>
+</div></code></pre>
+
+<p>使用驼峰命名法：首字母小写，其余每一个有意义单词的首字母都要大写（尽可能语义化明显，使用英文单词）</p>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="hljs maxima"><div class="hljs-line">+ <span class="hljs-built_in">let</span> studentInformation；
+</div><div class="hljs-line">    + <span class="hljs-built_in">let</span> studentInfo;
+</div><div class="hljs-line">    +  / / 常用的缩写: аdd/ іnѕеrt/сrеаtе/nеw （新增）. uрdаtе ( 修改)， <span class="hljs-built_in">delete</span>/<span class="hljs-built_in">del</span>/<span class="hljs-built_in">remove</span>/rm (删除) 
+</div><div class="hljs-line">sel/select/query/<span class="hljs-built_in">get</span> (查询) . info（信息）...
+</div></code></pre>
+
+<p>不能使用关键字和保留字，当下有特殊含义的是关键字，未来与可能会成为关键字的叫做保留字</p>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="hljs verilog"><div class="hljs-line"><span class="hljs-keyword">var</span> <span class="hljs-keyword">let</span> <span class="hljs-keyword">const</span> <span class="hljs-keyword">function</span>...
+</div><div class="hljs-line"><span class="hljs-keyword">var</span> var10=<span class="hljs-number">10</span>;<span class="hljs-comment">//=&gt;肯定不行</span>
+</div></code></pre>
+
+<p>var let const function… <br>
+var var10=10;//=&gt;肯定不行</p>
+
+<ul><li><p>数据类型</p>
+
+<ul>
+<li><p>基本数据类型（值类型）：数字number，字符串string，布尔boolean，null，undefined</p></li>
+<li><p>引用数据类型：object(数组，对象，正则….)，function</p></li>
+<li><p>Symbol：唯一值</p>
+
+<ul>
+<li><p>//Symbol创建唯一值</p></li></ul></li></ul></li>
+</ul>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="hljs nix"><div class="hljs-line"><span class="hljs-keyword">let</span> <span class="hljs-attr">n=Symbol(100)</span>
+</div><div class="hljs-line">        <span class="hljs-keyword">let</span> <span class="hljs-attr">m=Symbol(100)</span>
+</div><div class="hljs-line">        <span class="hljs-attr">n==m?</span> <span class="hljs-literal">false</span>因为是唯一值，所以不能相同
+</div></code></pre>
+
+
+
+<h4 id="6js中常用的数据类型">6.JS中常用的数据类型</h4>
+
+<ul><li><p>基本数据类型</p>
+
+<ul>
+<li><p>数字number</p>
+
+<ul>
+<li><p>常规数字和NAN</p></li></ul></li>
+<li><p>字符串string</p>
+
+<ul>
+<li><p>所有用单引号，双引号，反引号（撇）包起来的都是字符串</p></li></ul></li>
+<li><p>布尔boolean</p>
+
+<ul>
+<li><p>true/false</p></li></ul></li>
+<li><p>空对象指针null</p></li>
+<li><p>未定义underfined</p></li></ul></li>
+<li><p>引用数据类型</p>
+
+<ul>
+<li><p>对象数据类型object</p>
+
+<ul>
+<li><p>{}普通对象</p></li>
+<li><p>【】数组对象</p></li>
+<li><p>正则对象</p></li>
+<li><p>Math数学函数对象</p></li>
+<li><p>日期对象</p></li>
+<li><p>……</p></li></ul></li>
+<li><p>函数数据类型function</p></li></ul></li>
+</ul></div></body></html>
